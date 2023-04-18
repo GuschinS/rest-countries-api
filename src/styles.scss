@@ -1,1 +1,129 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+//body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+* {
+  font-family: "Roboto", Arial, sans-serif;
+  color: #616161;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+}
+
+/* Text */
+
+h1 {
+  font-size: 32px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h1,
+h2 {
+  font-weight: lighter;
+}
+
+p {
+  font-size: 14px;
+}
+
+/* Hyperlink */
+
+a {
+  cursor: pointer;
+  color: #1976d2;
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+
+
+.details,
+.content-country {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: row;
+  margin: 20px auto 85px;
+  padding: 16px;
+  max-width: 950px;
+  width: 90%;
+  height: 650px;
+  border-radius: 4px;
+  border: 1px solid #c2c3c4;
+}
+
+
+
+.card,
+tr {
+  cursor: pointer;
+}
+
+.card:hover,
+.tr:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+}
+
+.card:hover,
+.tr:hover {
+  fill: rgb(105, 103, 103);
+}
+
+.back {
+  border-radius: 5px;
+  border: 2px solid #747474;
+  background-color: #ffffff;
+  color: #747474;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3px 7px;
+}
+
+.region {
+  margin-left: 10px;
+}
+
+/* Table */
+
+.link {
+  width: 100%;
+}
+
+.tr {
+  all: unset;
+  border-radius: 4px;
+  border: 1px solid #c2c3c4;
+  background-color: #e6ebf1;
+  height: 20px;
+  /* width: 100%; */
+  padding-top: 12px;
+  padding-bottom: 12px;
+  margin-top: 3px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+  line-height: 24px;
+}
+td {
+  padding-left: 10px;
+}
+
+ul {
+  max-width: 500px;
+  width: 90%;
+  margin-top: 100px;
+}
