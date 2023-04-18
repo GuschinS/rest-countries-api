@@ -1,0 +1,16 @@
+<app-header></app-header>
+
+<div class="content-region">
+  <h2>Regiony</h2>
+</div>
+
+<div class="content">
+  <div class="card-container" *ngFor="let region of regions">
+    <a class="card"  [title]="region.name"
+       [routerLink]="['/regions', region.id]">
+      <h2>{{ region.name }}</h2>
+    </a>
+  </div>
+</div>
+
+<app-footer></app-footer>
