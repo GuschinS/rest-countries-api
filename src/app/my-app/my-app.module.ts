@@ -7,6 +7,7 @@ import { RegionComponent } from './pages/region/region.component';
 import { CountryComponent } from './pages/country/country.component';
 import { CountryDetailsComponent } from './pages/country-details/country-details.component';
 import { RouterLink } from '@angular/router';
+import { MaterialModule } from '../material/material.module';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,6 @@ import { RouterLink } from '@angular/router';
     CountryComponent,
     CountryDetailsComponent,
   ],
-  imports: [CommonModule, RouterLink],
+  imports: [CommonModule, RouterLink, MaterialModule],
 })
 export class MyAppModule {}
