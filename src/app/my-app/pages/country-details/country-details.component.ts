@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { switchMap } from 'rxjs';
 import { RestCountries } from '../../interfaces/rest-countries';
 import { RestCountriesService } from '../../services/rest-countries.service';
+import { RegionIdService } from '../../services/region-id.service';
 
 @Component({
   selector: 'app-country-details',
@@ -14,10 +15,12 @@ export class CountryDetailsComponent implements OnInit {
   currenciesKey!: string;
   currencies!: string;
   flag?: string;
+  regionId!: number;
 
   constructor(
     private activatedRoute: ActivatedRoute,
-    private restCountriesService: RestCountriesService
+    private restCountriesService: RestCountriesService,
+    private regionIdService: RegionIdService
   ) {}
 
   ngOnInit(): void {
@@ -33,5 +36,8 @@ export class CountryDetailsComponent implements OnInit {
         this.currenciesKey = Object.keys(this.country.currencies)[0];
         this.currencies = country[0].currencies[this.currenciesKey].symbol;
       });
+    this.regionIdService.id.subscribe((value) => {
+      this.regionId = value;
+    });
   }
 }

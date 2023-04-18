@@ -3,9 +3,13 @@
   Wait please...
 </div>
 
+
 <div *ngIf="country">
   <div class="content-region">
+    <div></div>
     <h2>{{country.name.official}}</h2>
+    <button mat-button routerLink="/regions/{{regionId}}"><mat-icon
+      fontIcon="arrow_back"></mat-icon></button>
   </div>
   <div class="details">
     <ul class="list-group">

@@ -1,10 +1,12 @@
 <app-header></app-header>
 
 <div class="content-region">
-  <h2>Region:</h2>
+  <div></div>
   <div class="region" *ngIf="region">
+  <h2>Region:&nbsp;</h2>
     <h2>{{ region.name }}</h2>
   </div>
+  <button mat-button routerLink="/"><mat-icon fontIcon="arrow_back"></mat-icon></button>
 </div>
 
 <div class="content-country" *ngIf="countries.length > 0">

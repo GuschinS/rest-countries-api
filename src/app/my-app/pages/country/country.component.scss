@@ -2,10 +2,18 @@
   height: 60px;
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+  .region {
+    display: flex;
+  }
   h2 {
     padding-top: 20px;
   }
+  button{
+    margin-right: 10px;
+  }
+
 }
 .content-country {
   overflow-y: scroll;
