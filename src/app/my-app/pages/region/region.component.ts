@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { regions } from '../../interfaces/regions';
 
 @Component({
@@ -6,10 +6,6 @@ import { regions } from '../../interfaces/regions';
   templateUrl: './region.component.html',
   styleUrls: ['./region.component.scss'],
 })
-export class RegionComponent implements OnInit {
+export class RegionComponent {
   regions = regions;
-
-  constructor() {}
-
-  ngOnInit(): void {}
 }

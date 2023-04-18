@@ -12,7 +12,7 @@ import { RestCountriesService } from '../../services/rest-countries.service';
 export class CountryComponent implements OnInit {
   region: Regions | undefined;
 
-  selectedRegion: string = '';
+  selectedRegion = '';
 
   countries: RestCountries[] = [];
 

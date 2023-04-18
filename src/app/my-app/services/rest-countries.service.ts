@@ -7,7 +7,7 @@ import { RestCountries } from '../interfaces/rest-countries';
   providedIn: 'root',
 })
 export class RestCountriesService {
-  private apiUrl: string = 'https://restcountries.com/v3.1';
+  private apiUrl = 'https://restcountries.com/v3.1';
 
   getHttpParams() {
     return new HttpParams().set('fields', 'name,capital,cca2,flags,population');
