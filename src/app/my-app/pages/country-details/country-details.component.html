@@ -1,1 +1,32 @@
-<p>country-details works!</p>
+<app-header></app-header>
+<div *ngIf="!country" class="alert alert-info">
+  Wait please...
+</div>
+
+<div *ngIf="country">
+  <div class="content-region">
+    <h2>{{country.name.official}}</h2>
+  </div>
+  <div class="details">
+    <ul class="list-group">
+      <li class="list-group-item">
+        <div class="top-details">
+          <div class="small-flag">
+            <img [src]="flag" alt="countryflag" class="img-thumbnail">
+          </div>
+          <div>
+            <h3>{{country.cca3}}</h3>
+          </div>
+        </div>
+      </li>
+      <li class="list-group-item"> <strong>Stolica:</strong> {{country.capital}}</li>
+      <li class="list-group-item"><strong>Populacja:</strong> {{country.population | number}}</li>
+      <li class="list-group-item"><strong>Powierzchnia:</strong> {{country.area | number}} km<sup>2</sup> </li>
+      <li class="list-group-item"> <strong>Kontynent:</strong> {{country.continents}}</li>
+      <li class="list-group-item"> <strong>Strefa czasowa:</strong> {{country.timezones[0]}}, {{country.timezones[1]}}
+      </li>
+      <li class="list-group-item"><strong>Waluta:</strong> {{currencies}}</li>
+    </ul>
+  </div>
+</div>
+<app-footer></app-footer>
