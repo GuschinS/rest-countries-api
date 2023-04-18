@@ -1,1 +1,23 @@
-<p>country works!</p>
+<app-header></app-header>
+
+<div class="content-region">
+  <h2>Region:</h2>
+  <div class="region" *ngIf="region">
+    <h2>{{ region.name }}</h2>
+  </div>
+</div>
+
+<div class="content-country" *ngIf="countries.length > 0">
+  <table class="table table-hover">
+    <tbody>
+    <tr class="tr" *ngFor="let c of countries; index as i;">
+      <a class="link" [routerLink]="['/country', c.cca2]">
+        <td><img [src]="c.flags.svg" alt="flag" class="small-flag"></td>
+        <td>{{c.name.common}}</td>
+      </a>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+<app-footer></app-footer>
